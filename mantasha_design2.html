@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Mantasha Khan — Earn From Home</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','1689964628832460');fbq('track','PageView');</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1689964628832460&ev=PageView&noscript=1"/></noscript>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;overflow-x:hidden;}
+:root{
+  --bg:#f5f2ee;
+  --bg2:#ede9e3;
+  --bg3:#e4dfd7;
+  --blue:#1b4fff;
+  --blue2:#3d68ff;
+  --dark:#141210;
+  --dark2:#2a2520;
+  --dark3:#48403a;
+  --muted:#9a9088;
+  --muted2:#6a6058;
+  --white:#ffffff;
+  --head:'Bricolage Grotesque',sans-serif;
+  --body:'Lato',sans-serif;
+}
+body{font-family:var(--body);background:var(--bg);color:var(--dark);overflow-x:hidden;line-height:1.65;}
+img{display:block;max-width:100%;}
+::-webkit-scrollbar{width:3px;}
+::-webkit-scrollbar-thumb{background:var(--blue);}
+
+.ov{display:none;position:fixed;inset:0;background:rgba(20,18,16,.85);z-index:9999;align-items:center;justify-content:center;padding:16px;backdrop-filter:blur(14px);}
+.ov.on{display:flex;}
+.pbox{background:var(--white);padding:28px;max-width:460px;width:100%;position:relative;max-height:88vh;overflow-y:auto;border-radius:4px;}
+.pbox h3{color:var(--blue);font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin:12px 0 4px;}
+.pbox h3:first-of-type{margin-top:0;}
+.pbox p{color:var(--muted2);font-size:.8rem;line-height:1.7;}
+.mcls{position:absolute;top:10px;right:14px;background:none;border:none;color:var(--muted);font-size:20px;cursor:pointer;}
+.mcls:hover{color:var(--dark);}
+
+.fbox{background:var(--white);padding:32px 26px;max-width:430px;width:100%;position:relative;border-radius:4px;box-shadow:0 32px 80px rgba(20,18,16,.25);}
+.ftitle{font-family:var(--head);font-size:1.6rem;font-weight:800;color:var(--dark);text-align:center;margin-bottom:2px;}
+.fsub{font-size:.72rem;color:var(--muted);text-align:center;margin-bottom:18px;}
+.fg{margin-bottom:11px;}
+.fg label{display:block;font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:5px;}
+.fg input,.fg select{width:100%;padding:10px 13px;background:var(--bg);border:1.5px solid var(--bg3);border-radius:4px;font-family:var(--body);font-size:.88rem;color:var(--dark);outline:none;transition:border-color .2s;-webkit-appearance:none;}
+.fg input::placeholder{color:var(--muted);}
+.fg select option{background:var(--white);}
+.fg input:focus,.fg select:focus{border-color:var(--blue);}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:9px;}
+.fsend{width:100%;padding:13px;background:var(--blue);color:#fff;font-family:var(--head);font-size:1rem;font-weight:700;border:none;border-radius:4px;margin-top:7px;cursor:pointer;transition:all .25s;}
+.fsend:hover{background:var(--blue2);transform:translateY(-2px);box-shadow:0 8px 24px rgba(27,79,255,.3);}
+.fsend:disabled{opacity:.5;cursor:not-allowed;transform:none;}
+.fstatus{text-align:center;font-size:.72rem;margin-top:8px;color:var(--blue);}
+
+/* HERO — light, big image side */
+#hero{
+  background:var(--white);
+  display:grid;grid-template-columns:1fr 1fr;
+  min-height:100vh;
+  border-bottom:1px solid var(--bg3);
+}
+.hero-left{
+  padding:56px 7%;
+  display:flex;flex-direction:column;justify-content:center;
+  border-right:1px solid var(--bg3);
+}
+.h-over{font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);margin-bottom:14px;display:flex;align-items:center;gap:8px;}
+.h-over::before{content:'';width:20px;height:2px;background:var(--blue);}
+.hdot{width:5px;height:5px;background:var(--blue);border-radius:50%;animation:hd 1.8s infinite;flex-shrink:0;}
+@keyframes hd{0%,100%{opacity:1}50%{opacity:.2}}
+.hh{font-family:var(--head);font-size:clamp(2.4rem,4.5vw,3.8rem);font-weight:800;line-height:1.0;color:var(--dark);margin-bottom:6px;letter-spacing:-.5px;}
+.hh .bl{color:var(--blue);}
+.hp{font-size:.92rem;color:var(--muted2);max-width:400px;line-height:1.75;margin:14px 0 22px;}
+.hp strong{color:var(--dark);font-weight:700;}
+/* stats — vertical list */
+.h-stat-list{display:flex;flex-direction:column;gap:0;border:1.5px solid var(--bg3);border-radius:4px;overflow:hidden;margin-bottom:24px;}
+.hsl{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid var(--bg3);}
+.hsl:last-child{border-bottom:none;}
+.hsl-n{font-family:var(--head);font-size:1.4rem;font-weight:800;color:var(--blue);line-height:1;letter-spacing:-.5px;}
+.hsl-l{font-size:.62rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;}
+.h-cta{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--blue);color:#fff;padding:15px 20px;width:100%;border:none;border-radius:4px;font-family:var(--head);font-size:.95rem;font-weight:700;letter-spacing:.02em;cursor:pointer;transition:all .3s;box-sizing:border-box;}
+.h-cta:hover{background:var(--blue2);transform:translateY(-2px);box-shadow:0 8px 24px rgba(27,79,255,.3);}
+.hero-right{position:relative;overflow:hidden;background:var(--bg2);}
+.hero-right img{width:100%;height:100%;object-fit:cover;display:block;}
+.hero-right-ph{width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.85rem;}
+/* blue caption overlay */
+.hero-caption{position:absolute;bottom:0;left:0;right:0;background:var(--blue);padding:14px 22px;}
+.hero-caption p{font-family:var(--head);font-size:.9rem;font-weight:600;color:#fff;letter-spacing:.2px;}
+/* hero count */
+.hero-count-box{display:inline-flex;align-items:center;gap:10px;background:var(--bg);border:1.5px solid var(--bg3);border-radius:4px;padding:10px 16px;margin-bottom:16px;}
+.hcn{font-family:var(--head);font-size:1.8rem;font-weight:800;color:var(--dark);letter-spacing:-1px;line-height:1;}
+.hcl{font-size:.68rem;color:var(--muted2);line-height:1.3;}
+
+/* JOURNEY */
+#journey{background:var(--bg);padding:52px 7%;border-bottom:1px solid var(--bg3);}
+.jg{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;max-width:980px;}
+.ji-wrap{border-radius:8px;overflow:hidden;box-shadow:0 16px 48px rgba(20,18,16,.1);}
+.ji-wrap img{width:100%;display:block;}
+.ji-ph{width:100%;aspect-ratio:4/3;background:var(--bg2);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.85rem;}
+.sl{font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+.sl::after{content:'';width:28px;height:1.5px;background:var(--blue);opacity:.4;}
+.sh{font-family:var(--head);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;color:var(--dark);line-height:1.05;letter-spacing:-.3px;margin-bottom:12px;}
+.sh span{color:var(--blue);}
+.sp{font-size:.88rem;color:var(--muted2);line-height:1.78;max-width:420px;}
+
+/* COACH */
+#coach{background:var(--dark);padding:52px 7%;border-bottom:1px solid rgba(255,255,255,.06);}
+.cg{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;max-width:980px;}
+.coach-sl{font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(27,79,255,.7);margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+.coach-sl::after{content:'';width:28px;height:1.5px;background:rgba(27,79,255,.4);}
+.cname{font-family:var(--head);font-size:clamp(2.5rem,5.5vw,4.5rem);font-weight:800;color:#fff;line-height:.95;letter-spacing:-.5px;margin-bottom:16px;}
+.cname em{display:block;font-style:normal;color:var(--blue2);}
+.ctags2{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:14px;}
+.ctg2{padding:5px 12px;border:1px solid rgba(255,255,255,.12);border-radius:100px;font-size:.72rem;font-weight:500;color:rgba(255,255,255,.65);}
+.cbio2{font-size:.88rem;color:rgba(255,255,255,.58);line-height:1.8;max-width:460px;margin-bottom:18px;}
+.cbio2 strong{color:#fff;}
+.promise2{background:var(--blue);padding:16px 20px;border-radius:4px;}
+.promise2 p{font-family:var(--head);font-size:1rem;font-weight:700;color:#fff;letter-spacing:.2px;}
+.promise2 cite{font-size:.62rem;color:rgba(255,255,255,.6);font-style:normal;font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-top:6px;display:block;}
+/* stat cards */
+.cstat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.csc{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:6px;padding:20px 16px;text-align:center;}
+.cscn{font-family:var(--head);font-size:1.9rem;font-weight:800;color:var(--blue2);line-height:1;letter-spacing:-1px;}
+.cscl{font-size:.6rem;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:.1em;margin-top:4px;}
+
+/* TESTI */
+#testi{padding:52px 0;background:var(--bg2);overflow:hidden;border-bottom:1px solid var(--bg3);}
+.th{padding:0 7%;margin-bottom:20px;}
+.mou{overflow:hidden;-webkit-mask:linear-gradient(to right,transparent,#000 5%,#000 95%,transparent);mask:linear-gradient(to right,transparent,#000 5%,#000 95%,transparent);}
+.mtr{display:flex;gap:10px;width:max-content;animation:msc 30s linear infinite;}
+.mtr:hover{animation-play-state:paused;}
+@keyframes msc{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.tc{flex:0 0 172px;border-radius:6px;overflow:hidden;flex-shrink:0;border:1.5px solid var(--bg3);box-shadow:0 4px 16px rgba(20,18,16,.08);transition:all .3s;}
+.tc:hover{border-color:var(--blue);transform:translateY(-4px);}
+.tc img{width:100%;display:block;}
+
+/* BENEFITS */
+#benefits{background:var(--white);padding:52px 7%;border-bottom:1px solid var(--bg3);}
+.blay{display:grid;grid-template-columns:280px 1fr;gap:52px;align-items:start;max-width:980px;}
+.bside2 .sh{font-size:clamp(1.8rem,3vw,2.4rem);}
+.bside2 p{font-size:.84rem;color:var(--muted2);margin-top:10px;line-height:1.7;}
+.bcards2{display:flex;flex-direction:column;gap:12px;}
+.bc2{background:var(--bg);border:1.5px solid var(--bg3);border-radius:6px;padding:20px 22px;display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start;transition:all .3s;}
+.bc2:hover{border-color:var(--blue);background:var(--white);transform:translateX(4px);}
+.bcn2{font-family:var(--head);font-size:1.8rem;font-weight:800;color:rgba(27,79,255,.15);line-height:1;}
+.bct2{font-size:.9rem;font-weight:700;color:var(--dark);margin-bottom:4px;}
+.bcd2{font-size:.8rem;color:var(--muted2);line-height:1.65;}
+.bcta2{background:var(--blue);border-radius:6px;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:4px;}
+.bctxt2{font-family:var(--head);font-size:1rem;font-weight:700;color:#fff;letter-spacing:.2px;}
+.btn-w{display:inline-flex;align-items:center;gap:7px;background:#fff;color:var(--blue);padding:10px 18px;border:none;border-radius:4px;font-family:var(--head);font-size:.88rem;font-weight:700;letter-spacing:.2px;cursor:pointer;transition:all .2s;white-space:nowrap;}
+.btn-w:hover{background:var(--bg);}
+
+/* NUMBERS */
+#numbers{padding:52px 7%;background:var(--bg);border-bottom:1px solid var(--bg3);}
+.ng2{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:860px;margin-top:24px;}
+.ntab2{border:1.5px solid var(--bg3);border-radius:6px;overflow:hidden;}
+.nr2{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--bg3);background:var(--white);}
+.nr2:last-child{border-bottom:none;}
+.nv2{font-family:var(--head);font-size:1.9rem;font-weight:800;color:var(--blue);line-height:1;letter-spacing:-1px;}
+.nl2{font-size:.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-top:2px;}
+.ni2{font-size:1.2rem;opacity:.5;}
+.eb3{background:var(--white);border:1.5px solid var(--bg3);border-radius:6px;border-top:3px solid var(--blue);padding:20px;}
+.et3{font-family:var(--head);font-size:.9rem;font-weight:700;color:var(--blue);margin-bottom:12px;letter-spacing:.2px;}
+.eg3{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.ebox3{background:var(--bg);border:1px solid var(--bg3);border-radius:4px;padding:16px;text-align:center;}
+.ev3{font-family:var(--head);font-size:1.5rem;font-weight:800;color:var(--dark);line-height:1;letter-spacing:-1px;}
+.el3{font-size:.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-top:4px;}
+
+/* FAQ */
+#faq{padding:52px 7%;background:var(--bg2);border-bottom:1px solid var(--bg3);}
+.fw2{display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:980px;}
+.fi-l2{border-top:1.5px solid var(--bg3);}
+.fi2x{border-bottom:1.5px solid var(--bg3);}
+.fq2{width:100%;background:none;border:none;text-align:left;padding:14px 0;font-family:var(--body);font-size:.88rem;font-weight:400;color:var(--muted2);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px;transition:color .2s;}
+.fq2:hover,.fi2x.open .fq2{color:var(--blue);}
+.fic2{width:20px;height:20px;border:1.5px solid var(--bg3);color:var(--blue);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;transition:all .3s;}
+.fi2x.open .fic2{background:var(--blue);border-color:var(--blue);color:#fff;transform:rotate(45deg);}
+.fa2{max-height:0;overflow:hidden;transition:max-height .4s,padding .3s;font-size:.82rem;color:var(--muted);line-height:1.75;padding:0;}
+.fi2x.open .fa2{max-height:130px;padding-bottom:13px;}
+
+/* CTA */
+#cta{border-top:1px solid var(--bg3);display:grid;grid-template-columns:1fr 1fr;}
+.ctl2{background:var(--dark);padding:52px 7%;border-right:1px solid rgba(255,255,255,.06);}
+.ch2{font-family:var(--head);font-size:clamp(2rem,4vw,3.4rem);font-weight:800;color:#fff;line-height:.98;letter-spacing:-.5px;margin-bottom:12px;}
+.ch2 span{color:var(--blue2);}
+.cp2{font-size:.88rem;color:rgba(255,255,255,.55);margin-bottom:20px;line-height:1.7;}
+.hc2{border-left:2px solid var(--blue);padding:12px 16px;background:rgba(27,79,255,.06);margin-bottom:13px;border-radius:0 4px 4px 0;}
+.ht2{font-size:.62rem;font-weight:700;color:rgba(27,79,255,.8);letter-spacing:.14em;text-transform:uppercase;margin-bottom:7px;}
+.hb2{font-size:.86rem;color:rgba(255,255,255,.55);line-height:2.0;}
+.hb2 strong{color:#fff;}
+.nb2{display:flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.08);border-radius:4px;padding:9px 13px;margin-bottom:13px;}
+.nb2 span{font-size:.84rem;color:rgba(255,255,255,.8);font-weight:500;}
+.wbtn2{display:flex;align-items:center;justify-content:center;gap:9px;background:#25D366;color:#fff;font-family:var(--head);font-size:1rem;font-weight:700;letter-spacing:.5px;padding:15px;border:none;border-radius:4px;width:100%;margin-bottom:10px;cursor:pointer;transition:all .3s;}
+.wbtn2:hover{background:#1fbd5a;transform:translateY(-2px);}
+.wit2{border:1px solid rgba(255,255,255,.07);border-radius:4px;padding:13px 15px;}
+.wh2{font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:7px;}
+.wr2{display:flex;align-items:center;gap:8px;font-size:.8rem;color:rgba(255,255,255,.5);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.05);}
+.wr2:last-child{border-bottom:none;}
+.wd2{width:15px;height:15px;background:var(--blue);display:flex;align-items:center;justify-content:center;font-size:.5rem;color:#fff;font-weight:900;border-radius:50%;flex-shrink:0;}
+
+.ctr2{background:var(--bg);padding:52px 7%;display:flex;flex-direction:column;justify-content:center;}
+.crt2{font-family:var(--head);font-size:1rem;font-weight:700;color:var(--blue);margin-bottom:14px;letter-spacing:.5px;}
+.ig2{display:flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff;font-size:.82rem;font-weight:700;padding:13px 16px;text-decoration:none;transition:all .3s;margin-bottom:10px;border-radius:4px;}
+.ig2:hover{opacity:.88;transform:translateX(4px);}
+.pl2{color:var(--muted);font-size:.72rem;text-decoration:none;display:block;margin-top:6px;transition:color .2s;}
+.pl2:hover{color:var(--blue);}
+.cc2{background:var(--white);border:1.5px solid var(--bg3);border-left:3px solid var(--blue);border-radius:0 4px 4px 0;padding:14px 16px;margin-top:14px;}
+.cct2{font-family:var(--head);font-size:.85rem;font-weight:700;color:var(--blue);margin-bottom:5px;}
+.ccp2{font-size:.8rem;color:var(--muted2);line-height:1.65;}
+
+footer{background:var(--dark2);padding:20px 7%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+.f-t{font-size:.78rem;color:rgba(255,255,255,.5);}
+.f-s{font-family:var(--head);font-size:.9rem;font-weight:600;color:rgba(255,255,255,.65);}
+.f-p{font-size:.72rem;color:rgba(255,255,255,.3);}
+.f-p strong{color:var(--blue2);}
+
+.sr{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease;}
+.sr.in{opacity:1;transform:translateY(0);}
+
+@media(max-width:900px){
+  #hero,.jg,.cg,.blay,.fw2,.ng2,#cta{grid-template-columns:1fr;}
+  #hero .hero-right{min-height:280px;}
+  #cta .ctl2{border-right:none;border-bottom:1px solid rgba(255,255,255,.06);}
+  .bcta2{flex-direction:column;text-align:center;}
+  footer{flex-direction:column;text-align:center;}
+}
+@media(max-width:540px){.hh{font-size:clamp(2rem,9vw,3rem);}.hero-left{border-right:none;}}
+</style>
+</head>
+<body>
+
+<div class="ov" id="privacyModal">
+  <div class="pbox">
+    <button class="mcls" onclick="closeM('privacyModal')">×</button>
+    <h3>Information We Collect</h3><p>We collect your name and phone number when you contact us through WhatsApp or our form.</p>
+    <h3>How We Use It</h3><p>Only to communicate about our training programs. Never sold to third parties.</p>
+    <h3>Your Rights</h3><p>You may access, correct, or delete your information at any time.</p>
+  </div>
+</div>
+
+<div class="ov" id="formModal">
+  <div class="fbox">
+    <button class="mcls" onclick="closeM('formModal')">×</button>
+    <div class="ftitle">Let's Begin ✨</div>
+    <div class="fsub">Mantasha Khan will reach out within 24 hrs</div>
+    <input type="hidden" id="formSource" value=""/>
+    <div class="fg"><label>Full Name *</label><input type="text" id="m-name" placeholder="Your full name"/></div>
+    <div class="fg"><label>Phone *</label><input type="tel" id="m-phone" placeholder="10-digit number" maxlength="10" inputmode="numeric"/></div>
+    <div class="frow">
+      <div class="fg"><label>Age *</label><input type="number" id="m-age" placeholder="Age" min="15" max="60"/></div>
+      <div class="fg"><label>Gender *</label><select id="m-gender"><option value="">Select</option><option>Female</option><option>Male</option><option>Other</option></select></div>
+    </div>
+    <div class="fg"><label>Profession *</label><select id="m-profession"><option value="">Select</option><option>Student</option><option>Housewife</option><option>Working Professional</option><option>Other</option></select></div>
+    <button class="fsend" id="sendBtn" onclick="submitForm()">📲 Send to WhatsApp</button>
+    <div class="fstatus" id="formStatus"></div>
+  </div>
+</div>
+
+<section id="hero">
+  <div class="hero-left">
+    <div class="h-over"><span class="hdot"></span> Mantasha Khan · Online Earning Coach</div>
+    <h1 class="hh">Learn Skills.<br/><span class="bl">Earn Online.</span><br/>Live Free.</h1>
+    <p class="hp">Learn digital skills, build online income — <strong>no experience needed.</strong> Join and transform your life today.</p>
+    <div class="hero-count-box">
+      <div class="hcn"><span id="heroCount">0</span>+</div>
+      <div class="hcl">Lives transformed<br/>by this community</div>
+    </div>
+    <div class="h-stat-list">
+      <div class="hsl"><div class="hsl-l">Students</div><div class="hsl-n counter" data-target="2000" data-suffix="+">0+</div></div>
+      <div class="hsl"><div class="hsl-l">Years Experience</div><div class="hsl-n counter" data-target="3" data-suffix="+">0+</div></div>
+      <div class="hsl"><div class="hsl-l">Monthly Income</div><div class="hsl-n">₹<span class="counter" data-target="100000" data-suffix="+">0</span></div></div>
+    </div>
+    <button class="h-cta" onclick="openFormModal('Hero CTA')">📲 Connect on WhatsApp Now</button>
+  </div>
+  <div class="hero-right">
+    <img src="https://i.ibb.co/DDxfWc1H/Whats-App-Image-2026-03-29-at-18-45-16.jpg" alt="Mantasha Khan" onerror="this.parentElement.innerHTML='<div class=hero-right-ph>📸 Add Image</div>'"/>
+    <div class="hero-caption"><p>"Every woman has the power — she just needs the right path."</p></div>
+  </div>
+</section>
+
+<section id="journey">
+  <div class="jg" style="grid-template-columns:1fr;">
+    <div class="sr">
+      <div class="sl">My Story</div>
+      <h2 class="sh">Started From Zero,<br/><span>Found Freedom.</span></h2>
+      <p class="sp" style="max-width:640px;">No degree, no connections — just the right knowledge and hard work transformed my life. Now India's most dedicated online earning community. <strong style="color:var(--dark)">If I can do it, so can you.</strong></p>
+    </div>
+  </div>
+</section>
+
+<section id="coach">
+  <div class="cg">
+    <div class="sr">
+      <div class="coach-sl">Your Coach</div>
+      <h2 class="cname">Mantasha<br/><em>Khan.</em></h2>
+      <div class="ctags2"><div class="ctg2">✅ Entrepreneur</div><div class="ctg2">💻 Freelancer</div><div class="ctg2">🎯 Skills Coach</div><div class="ctg2">🌟 Women Empowerment</div></div>
+      <p class="cbio2">I started from absolute zero — no fancy degree, no connections. Just the right knowledge. My mission: <strong>Every Woman Deserves Financial Freedom.</strong></p>
+      <div class="promise2"><p>"Real Skills. Real Income. Real Freedom."</p><cite>— Mantasha Khan</cite></div>
+    </div>
+    <div class="cstat-grid sr" style="transition-delay:.12s">
+      <div class="csc"><div class="cscn counter" data-target="3" data-suffix="+">0+</div><div class="cscl">Years Experience</div></div>
+      <div class="csc"><div class="cscn counter" data-target="2000" data-suffix="+">0+</div><div class="cscl">Students Helped</div></div>
+      <div class="csc"><div class="cscn counter" data-target="1000" data-suffix="+">0+</div><div class="cscl">Entrepreneurs</div></div>
+      <div class="csc"><div class="cscn">₹<span class="counter" data-target="100000" data-suffix="+">0</span></div><div class="cscl">Monthly</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="testi">
+  <div class="th sr">
+    <div class="sl">Real Proof</div>
+    <h2 class="sh">Real People. <span>Real Results.</span></h2>
+  </div>
+  <div class="mou"><div class="mtr" id="row1"></div></div>
+</section>
+
+<section id="benefits">
+  <div class="blay">
+    <div class="bside2 sr">
+      <div class="sl">What You Get</div>
+      <h2 class="sh">Everything<br/><span>In One Place.</span></h2>
+      <p>Everything you need — one mentor, one system, one community. No confusion, just results.</p>
+    </div>
+    <div class="sr" style="transition-delay:.1s">
+      <div class="bcards2">
+        <div class="bc2"><div class="bcn2">01</div><div><div class="bct2">Personal Mentorship</div><p class="bcd2">Direct WhatsApp access to Mantasha Khan. Real guidance whenever you need it.</p></div></div>
+        <div class="bc2"><div class="bcn2">02</div><div><div class="bct2">Proven Training System</div><p class="bcd2">From zero to consistent income — a complete step-by-step blueprint that works.</p></div></div>
+        <div class="bc2"><div class="bcn2">03</div><div><div class="bct2">Live Earner Community</div><p class="bcd2">Thousands of active earners. Daily wins, support and unstoppable momentum.</p></div></div>
+        <div class="bc2"><div class="bcn2">04</div><div><div class="bct2">First Income in 30 Days</div><p class="bcd2">Most students see their first income within 30 days of joining.</p></div></div>
+      </div>
+      <div class="bcta2">
+        <div class="bctxt2">Ready to start today?</div>
+        <button class="btn-w" onclick="openFormModal('Benefits CTA')">📲 Join Now →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="numbers">
+  <div class="sl sr">Track Record</div>
+  <h2 class="sh sr" style="margin-bottom:0;">Numbers That <span>Say It All.</span></h2>
+  <div class="ng2">
+    <div class="ntab2 sr">
+      <div class="nr2"><div><div class="nv2 counter" data-target="3" data-suffix="+">0+</div><div class="nl2">Years Experience</div></div><div class="ni2">⭐</div></div>
+      <div class="nr2"><div><div class="nv2 counter" data-target="1000" data-suffix="+">0+</div><div class="nl2">Entrepreneurs Created</div></div><div class="ni2">🚀</div></div>
+    </div>
+    <div class="eb3 sr" style="transition-delay:.1s">
+      <div class="et3">⚡ Your Turn Now</div>
+      <div class="eg3">
+        <div class="ebox3"><div class="ev3 counter" data-target="1600000" data-prefix="₹" data-format="full">₹0</div><div class="el3">Earned by Students</div></div>
+        <div class="ebox3"><div class="ev3 counter" data-target="500" data-suffix="+">0+</div><div class="el3">Earning ₹50K+</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="fw2">
+    <div class="sr">
+      <div class="sl">FAQ</div>
+      <h2 class="sh">Questions<br/><span>Answered.</span></h2>
+      <p style="font-size:.84rem;color:var(--muted2);margin-top:10px;line-height:1.7;">Every question answered here. Still have doubts? Just WhatsApp us!</p>
+    </div>
+    <div class="fi-l2 sr" style="transition-delay:.1s">
+      <div class="fi2x"><button class="fq2" onclick="tFaq(this)">What kind of work will I do? <span class="fic2">+</span></button><div class="fa2">Website Design, Graphics, Video Editing, Content Creation — 100% legal and genuine.</div></div>
+      <div class="fi2x"><button class="fq2" onclick="tFaq(this)">Is this program legitimate? <span class="fic2">+</span></button><div class="fa2">Yes! 2000+ students earning consistently. Results speak for themselves.</div></div>
+      <div class="fi2x"><button class="fq2" onclick="tFaq(this)">How much time daily? <span class="fic2">+</span></button><div class="fa2">Just 1-2 hours daily. Works alongside your job, studies, or family.</div></div>
+      <div class="fi2x"><button class="fq2" onclick="tFaq(this)">When will I start earning? <span class="fic2">+</span></button><div class="fa2">Most students earn within 30 days. Steady income in 1-2 months.</div></div>
+      <div class="fi2x"><button class="fq2" onclick="tFaq(this)">Any prior experience needed? <span class="fic2">+</span></button><div class="fa2">None at all! Everything taught from scratch, step by step.</div></div>
+      <div class="fi2x"><button class="fq2" onclick="tFaq(this)">What support after joining? <span class="fic2">+</span></button><div class="fa2">Daily mentorship, 24/7 WhatsApp, weekly calls and active earner community.</div></div>
+      <div class="fi2x"><button class="fq2" onclick="tFaq(this)">Is there any fee? <span class="fic2">+</span></button><div class="fa2">A small investment covers everything. Zero hidden charges ever.</div></div>
+      <div class="fi2x"><button class="fq2" onclick="tFaq(this)">Can I do this with my job? <span class="fic2">+</span></button><div class="fa2">Yes! Built for busy people. Learn in your free time, grow at your pace.</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="cta">
+  <div class="ctl2 sr">
+    <h2 class="ch2">One Message.<br/><span>New Life.</span></h2>
+    <p class="cp2">Financial freedom doesn't come from waiting. One WhatsApp message can change everything today.</p>
+    <div class="hc2"><div class="ht2">📲 How to Begin</div><div class="hb2">WhatsApp par message karein:<br/><strong>📝 Naam · 🎂 Age · 💼 Profession</strong></div></div>
+    <div class="nb2"><span>📌 Save My Number: <strong>8299588589</strong></span></div>
+    <button class="wbtn2" onclick="openFormModal('CTA Button')">📲 Message on WhatsApp Now</button>
+    <div class="wit2">
+      <div class="wh2">Within 24 Hours You'll Receive</div>
+      <div class="wr2"><div class="wd2">✓</div>Complete program details</div>
+      <div class="wr2"><div class="wd2">✓</div>Your personal earning roadmap</div>
+    </div>
+  </div>
+  <div class="ctr2 sr" style="transition-delay:.1s">
+    <div class="crt2">STAY CONNECTED</div>
+    <a href="https://www.instagram.com/mantashakhan10x" target="_blank" rel="noopener" class="ig2">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      Follow on Instagram
+    </a>
+    <a href="#" class="pl2" onclick="openM('privacyModal');return false;">🔒 Privacy Policy</a>
+    <div class="cc2"><div class="cct2">🌟 Our Promise</div><div class="ccp2">Real Skills. Real Income. Real Freedom. Thousands of women transformed their lives — your turn is now.</div></div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-t">🌟 Empower with skills • 🌈 Support every vision • 🚀 Dreams to direction</div>
+  <div class="f-s">❤️ With Love & Strength, Mantasha Khan</div>
+  <div class="f-p">Powered by <strong>Osama · AdDestini</strong></div>
+</footer>
+
+<script>
+const SHEET_URL='https://script.google.com/macros/s/AKfycbyP5ViEqCe6OiuGcSQycYEM4VvcXdnnfvEvYsr4pRLeDkU8BLuz_vflTq890LKenjgk/exec';
+const WA_NUMBER='918299588589';
+const imgs=['https://i.ibb.co/FLYkdfwz/1.jpg','https://i.ibb.co/s9np0rXH/2.jpg','https://i.ibb.co/qMB0qW38/3.jpg','https://i.ibb.co/hRXFy5Hx/4.jpg','https://i.ibb.co/VYRrdXKt/5.jpg','https://i.ibb.co/VW9srR0h/6.jpg','https://i.ibb.co/SDq6W1W5/7.jpg'];
+function openM(id){document.getElementById(id).classList.add('on');document.body.style.overflow='hidden';}
+function closeM(id){document.getElementById(id).classList.remove('on');document.body.style.overflow='';}
+function openFormModal(src){clearF();document.getElementById('formSource').value=src||'';openM('formModal');}
+document.querySelectorAll('.ov').forEach(o=>o.addEventListener('click',function(e){if(e.target===this)closeM(this.id);}));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeM('formModal');closeM('privacyModal');}});
+function clearF(){['m-name','m-phone','m-age','m-gender','m-profession'].forEach(id=>document.getElementById(id).value='');document.getElementById('formStatus').textContent='';const b=document.getElementById('sendBtn');b.disabled=false;b.textContent='📲 Send to WhatsApp';}
+document.getElementById('m-phone').addEventListener('input',function(){this.value=this.value.replace(/\D/g,'').slice(0,10);});
+async function submitForm(){
+  const name=document.getElementById('m-name').value.trim(),phone=document.getElementById('m-phone').value.trim(),age=document.getElementById('m-age').value.trim(),gender=document.getElementById('m-gender').value,profession=document.getElementById('m-profession').value,source=document.getElementById('formSource').value;
+  if(!name||!phone||!age||!gender||!profession){document.getElementById('formStatus').textContent='⚠️ Please fill all fields.';return;}
+  if(phone.length!==10){document.getElementById('formStatus').textContent='⚠️ Enter valid 10-digit number.';return;}
+  const b=document.getElementById('sendBtn');b.disabled=true;b.textContent='Opening...';
+  saveSheet({name,phone,age,gender,profession,source});
+  if(typeof fbq!=='undefined')fbq('track','Lead');
+  const msg=`Hello Ma'am,\n\nI am interested in joining your program.\n\nName: ${name}\nPhone: ${phone}\nAge: ${age}\nGender: ${gender}\nProfession: ${profession}\n\nPlease next steps batayein. Shukriya!`;
+  setTimeout(()=>{window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`,'_blank');setTimeout(()=>closeM('formModal'),600);},600);
+}
+async function saveSheet(d){
+  if(!SHEET_URL||SHEET_URL.includes('YOUR_'))return;
+  const p='?timestamp='+encodeURIComponent(new Date().toLocaleString('en-IN'))+'&name='+encodeURIComponent(d.name)+'&phone='+encodeURIComponent(d.phone)+'&age='+encodeURIComponent(d.age)+'&gender='+encodeURIComponent(d.gender)+'&profession='+encodeURIComponent(d.profession)+'&source='+encodeURIComponent(d.source);
+  try{await fetch(SHEET_URL+p,{method:'GET',mode:'no-cors'});}catch(e){}
+}
+(function(){const el=document.getElementById('heroCount'),target=100000,dur=2400,s=performance.now(),ease=p=>p===1?1:1-Math.pow(2,-10*p);const tick=now=>{const p=Math.min((now-s)/dur,1);el.textContent=Math.floor(ease(p)*target).toLocaleString('en-IN');if(p<1)requestAnimationFrame(tick);};requestAnimationFrame(tick);})();
+function animC(el){if(el.dataset.done)return;el.dataset.done='1';const target=parseInt(el.dataset.target),suffix=el.dataset.suffix||'',prefix=el.dataset.prefix||'',fmt=el.dataset.format,dur=target>=100000?2000:1200,s=performance.now(),ease=p=>p===1?1:1-Math.pow(2,-10*p);const tick=now=>{const p=Math.min((now-s)/dur,1),v=Math.floor(ease(p)*target);if(fmt==='full'&&v>=100000)el.textContent=prefix+Math.floor(v/100000)+'L+';else el.textContent=prefix+v.toLocaleString('en-IN')+suffix;if(p<1)requestAnimationFrame(tick);};requestAnimationFrame(tick);}
+const row1=document.getElementById('row1');[...imgs,...imgs].forEach(src=>{const d=document.createElement('div');d.className='tc';d.innerHTML=`<img src="${src}" alt="Student" loading="lazy"/>`;row1.appendChild(d);});
+function tFaq(btn){const item=btn.closest('.fi2x'),isOpen=item.classList.contains('open');document.querySelectorAll('.fi2x.open').forEach(i=>i.classList.remove('open'));if(!isOpen)item.classList.add('open');}
+const obs=new IntersectionObserver(en=>{en.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');e.target.querySelectorAll('.counter').forEach(animC);obs.unobserve(e.target);}});},{threshold:.08});
+document.querySelectorAll('.sr').forEach(el=>obs.observe(el));
+const cobs=new IntersectionObserver(en=>{en.forEach(e=>{if(e.isIntersecting){animC(e.target);cobs.unobserve(e.target);}});},{threshold:.3});
+document.querySelectorAll('.counter').forEach(el=>{if(!el.closest('.sr'))cobs.observe(el);});
+</script>
+</body>
+</html>
